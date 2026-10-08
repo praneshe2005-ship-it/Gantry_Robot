@@ -1,0 +1,6 @@
+# Default initial positions for new_Gantry's ros2_control fake system
+
+initial_positions:
+  L1_joint: 0
+  L2_joint: 0
+  L3_001_joint: 0

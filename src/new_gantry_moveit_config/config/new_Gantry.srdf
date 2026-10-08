@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot name="new_Gantry">
+    <!--GROUPS: Representation of a set of joints and links.-->
+    <group name="Gantry">
+        <chain base_link="L0" tip_link="L3_001"/>
+    </group>
+    <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values.-->
+    <group_state name="Home" group="Gantry">
+        <joint name="L1_joint" value="0"/>
+        <joint name="L2_joint" value="0"/>
+        <joint name="L3_001_joint" value="0"/>
+    </group_state>
+    <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links.-->
+    <disable_collisions link1="L0" link2="L1" reason="Adjacent"/>
+    <disable_collisions link1="L0" link2="L2" reason="Default"/>
+    <disable_collisions link1="L0" link2="L3_001" reason="Default"/>
+    <disable_collisions link1="L1" link2="L2" reason="Adjacent"/>
+    <disable_collisions link1="L1" link2="L3_001" reason="Default"/>
+    <disable_collisions link1="L2" link2="L3_001" reason="Adjacent"/>
+</robot>
